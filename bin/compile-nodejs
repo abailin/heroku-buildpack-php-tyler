@@ -153,7 +153,7 @@ SCONS_PACKAGE="http://${S3_BUCKET}.s3.amazonaws.com/scons-${SCONS_VERSION}.tgz"
 # vendor directories
 VENDORED_NODE="$(mktmpdir node)"
 VENDORED_NPM="$(mktmpdir npm)"
-### VENDORED_SCONS="$(mktmpdir scons)"
+VENDORED_SCONS="$(mktmpdir scons)"
 
 # download and unpack packages
 echo "-----> Fetching Node.js binaries"
