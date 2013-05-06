@@ -10,6 +10,7 @@ LIBMCRYPT_VERSION=2.5.8
 LIBMEMCACHED_VERSION=1.0.7
 PHP_VERSION=5.4.12
 NEWRELIC_VERSION=2.9.5.78
+
 # S3_BUCKET=heroku-buildpack-php-tyler
 S3_BUCKET=pradux-heroku-binaries
 # END CONFIG
@@ -183,6 +184,15 @@ fi
 tar xzf ${NEWRELIC_FILE} -C ${BUILD_DIR}/local
 
 popd > /dev/null
+
+
+# node.js Installation
+pushd $BUILD_DIR > /dev/null
+echo "-----> Installing node.js"
+$BIN_DIR/compile-nodejs "$BUILD_DIR" "$CACHE_DIR"
+export PATH=$PATH=:$BUILD_DIR/node_modules/.bin/
+popd > /dev/null
+
 
 # Composer Installation
 pushd ${BUILD_DIR} > /dev/null
