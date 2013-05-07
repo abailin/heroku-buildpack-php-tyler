@@ -198,8 +198,8 @@ ls $VENDORED_NODE/lib
 echo "-- ls node-node/lib/node_modules"
 ls $VENDORED_NODE/lib/node_modules
 
-echo "-- /app/node_modules"
-ls /app/node_modules
+#echo "-- /app/node_modules"
+#ls /app/node_modules
 echo "-"
 
 # contents of /tmp -- parent folder of our build
