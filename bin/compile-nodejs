@@ -3,7 +3,7 @@
 
 # Retrieved 2012-11-12 from https://raw.github.com/heroku/heroku-buildpack-nodejs/master/bin/compile
 # Modified for use with taeram/heroku-buildpack-php by Jesse Patching <jesse@radpenguin.ca>
-echo "  - start"
+
 # fail fast
 set -e
 
@@ -22,8 +22,6 @@ S3_BUCKET="pradux-heroku-binaries"
 BUILD_DIR=$1
 CACHE_DIR=$2
 LP_DIR=`cd $(dirname $0); cd ..; pwd`
-
-echo "  - 1"
 
 function error() {
   echo " !     $*" >&2
