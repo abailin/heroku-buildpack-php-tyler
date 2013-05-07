@@ -202,6 +202,8 @@ ls $VENDORED_NODE/bin/node
 #echo "export PATH=\"\$VENDORED_NODE/bin:\$PATH\""
 PATH="$VENDORED_NODE/bin:$PATH"
 
+ln -s /usr/bin/nodejs /usr/bin/node
+
 echo "-"
 
 # contents of /tmp -- parent folder of our build
