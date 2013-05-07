@@ -180,6 +180,8 @@ run_npm "rebuild"
 echo "Dependencies installed" | indent
 
 # Put the node dependencies on the path
+echo " *** current dir "
+pwd
 cd node_modules/.bin
 for FILE in `ls -1`; do
     ln -s /app/node_modules/.bin/$FILE $BUILD_DIR/bin/$FILE
