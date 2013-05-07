@@ -180,6 +180,9 @@ run_npm "rebuild"
 echo "Dependencies installed" | indent
 
 # Put the node dependencies on the path
+echo "include path: {$INCLUDE_PATH}"
+echo "vendored node: ($VENDORED_NODE}"
+echo "*"
 echo " *** current dir "
 pwd
 ls -1
