@@ -179,14 +179,18 @@ run_npm "install --production"
 run_npm "rebuild"
 echo "Dependencies installed" | indent
 
+# current dir is /tmp/build_xxxxxxxxx
+#   and has our project in it:
+#   /app /bin /conf /lib /public_html
+
 # Put the node dependencies on the path
 echo "include path: {$INCLUDE_PATH}"
+ls -1 $INCLUDE_PATH
 echo "vendored node: ($VENDORED_NODE}"
+ls -1 $VENDORED_NODE
 echo "*"
-echo " *** current dir "
-pwd
-ls -1
 echo "--"
+# contents of /tmp -- parent folder of our build
 ls -1 ..
 echo "--"
 cd node_modules/.bin
