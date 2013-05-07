@@ -190,13 +190,13 @@ echo "Dependencies installed" | indent
 
 echo "-- vendored node: ($VENDORED_NODE}"
 ls  $VENDORED_NODE # bin/ include/ lib/ share/
-echo "-- ls node-node/bin"
-ls $VENDORED_NODE/bin
-echo "-- ls node-node/lib"
-ls $VENDORED_NODE/lib
+echo "-- ls node-node/bin/node"
+ls $VENDORED_NODE/bin/node
+echo "-- ls node-node/lib/node"
+ls $VENDORED_NODE/lib/node
 
-echo "-- ls node-node/lib/node_modules"
-ls $VENDORED_NODE/lib/node_modules
+echo "-- ls node-node/lib/node_modules/npm"
+ls $VENDORED_NODE/lib/node_modules/npm
 
 #echo "-- /app/node_modules"
 #ls /app/node_modules
