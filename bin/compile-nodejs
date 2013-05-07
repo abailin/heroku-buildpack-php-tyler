@@ -182,6 +182,7 @@ echo "Dependencies installed" | indent
 # Put the node dependencies on the path
 echo " *** current dir "
 pwd
+ls -1
 cd node_modules/.bin
 for FILE in `ls -1`; do
     ln -s /app/node_modules/.bin/$FILE $BUILD_DIR/bin/$FILE
