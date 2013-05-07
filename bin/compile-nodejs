@@ -184,12 +184,17 @@ echo "Dependencies installed" | indent
 #   /app /bin /conf /lib /public_html
 
 
-echo "include path: {$INCLUDE_PATH}"
+echo "-- include path: {$INCLUDE_PATH}"
 ls  $INCLUDE_PATH
-echo "vendored node: ($VENDORED_NODE}"
+echo "-- include path: {$INCLUDE_PATH}/node"
+ls  $INCLUDE_PATH/node
+echo "-- vendored node: ($VENDORED_NODE}"
 ls  $VENDORED_NODE
-echo "node-node/bin"
+echo "-- ls node-node/bin"
 ls $VENDORED_NODE/bin
+echo "-- ls node-node/lib"
+ls $VENDORED_NODE/lib
+
 echo "*"
 echo "--"
 # contents of /tmp -- parent folder of our build
