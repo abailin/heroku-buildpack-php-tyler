@@ -174,7 +174,7 @@ export CPPPATH="$INCLUDE_PATH"
 echo "-----> Installing dependencies with npm"
 run_npm "config set cache $CACHE_STORE_DIR"
 run_npm "install -g npm"
-run_npm "install -g less"
+run_npm "install less"
 # run_npm "install less"
 run_npm "install --production"
 run_npm "rebuild"
@@ -198,6 +198,8 @@ ls $VENDORED_NODE/lib
 echo "-- ls node-node/lib/node_modules"
 ls $VENDORED_NODE/lib/node_modules
 
+echo "-- /app/node_modules"
+ls /app/node_modules
 echo "-"
 
 # contents of /tmp -- parent folder of our build
